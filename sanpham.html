@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm - Ngọc Phát Engineering</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .filter-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .filter-buttons button:hover {
+      background-color: #666;
+    }
+    .product-card {
+      display: block; /* mặc định hiển thị */
+    }
+  </style>
+</head>
+
+<script>
+function filterProducts(category) {
+  let products = document.querySelectorAll('.product-card');
+  products.forEach(product => {
+    if (category === 'all') {
+      product.style.display = 'block';
+    } else {
+      if (product.classList.contains(category)) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    }
+  });
+}
+</script>
+
+
+<body class="dark-theme">
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Ngọc Phát Engineering</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="sanpham.html">Sản phẩm</a></li>
+        <li><a href="duan.html">Dự án</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products-section">
+    <h1>Danh mục sản phẩm cơ điện</h1>
+    <p>Chúng tôi cung cấp các thiết bị và vật tư cơ điện chất lượng cao, phục vụ cho công trình công nghiệp và dân dụng.</p>
+    
+    <!-- Bộ lọc -->
+    <div class="filter-buttons">
+      <button onclick="filterProducts('all')">Tất cả</button>
+      <button onclick="filterProducts('cable')">Thang, máng cáp</button>
+      <button onclick="filterProducts('cabinet')">Tủ điện</button>
+    </div>
+    
+    <div id="thangmangcap" class="products-grid">
+
+      <!-- Sản phẩm 1 -->
+  <a href="chitietsp/thangcap.html" class="product-card cable">
+    <img src="img/Thangcap.jpg" alt="Thang cáp điện">
+    <div class="product-info">
+      <h5>THANG CÁP / CABLE LADDER</h5>
+      <p>Thang cáp dùng để đi dây điện công nghiệp, chịu tải tốt, chống ăn mòn.</p>
+    </div>
+  </a>
+
+      <!-- Sản phẩm 2 -->
+       <a href="chitietsp/khaycap.html" class="product-card cable">
+    <img src="img/Khaycap.jpg" alt="Khay cáp điện">
+    <div class="product-info">
+      <h5>KHAY CÁP / CABLE TRAY</h5>
+      <p>Khay cáp dùng để đi dây điện công nghiệp, chịu tải tốt, chống ăn mòn.</p>
+    </div>
+        </a>
+      
+      <!-- Sản phẩm 3 -->
+<a href="chitietsp/mangcap.html" class="product-card cable">
+  <img src="img/Mangcap.jpg" alt="Máng cáp điện">
+  <div class="product-info">
+    <h5>MÁNG CÁP / CABLE TRUNKING</h5>
+    <p>Máng cáp dùng để đi dây điện công nghiệp, chịu tải tốt, chống ăn mòn.</p>
+  </div>
+</a>
+
+<!-- Sản phẩm 4 -->
+<a href="chitietsp/capluoi.html" class="product-card cable">
+  <img src="img/Mangcapluoi.jpg" alt="Máng cáp lưới">
+  <div class="product-info">
+    <h5>MÁNG CÁP LƯỚI / WIRE MESH CABLE TRAY</h5>
+    <p>Máng cáp lưới dùng để đi dây điện công nghiệp, chịu tải tốt, chống ăn mòn.</p>
+  </div>
+</a>
+
+<!-- Sản phẩm 5 -->
+<a href="chitietsp/santhaotac.html" class="product-card cable">
+  <img src="img/santhaotac.png" alt="Sàn thao tác kim cương">
+  <div class="product-info">
+    <h5>SÀN THAO TÁC KIM CƯƠNG / DIAMOND FLOOR GRATING</h5>
+    <p>Sàn thao tác kim cương chắc chắn, chống trượt, dễ lắp đặt.</p>
+  </div>
+</a>
+
+
+     <!-- Sản phẩm 6 -->
+<a href="chitietsp/tudien1.html" class="product-card cabinet">
+  <img src="img/votuhopbo.png" alt="Vỏ tủ trạm hợp bộ">
+  <div class="product-info">
+    <h5>VỎ TỦ TRẠM HỢP BỘ / Substation Enclosure</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 7 -->
+<a href="chitietsp/tudien2.html" class="product-card cabinet">
+  <img src="img/tudongbo.png" alt="Tủ hòa đồng bộ">
+  <div class="product-info">
+    <h5>TỦ HÒA ĐỒNG BỘ / Synchronizing Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 8 -->
+<a href="chitietsp/tudien3.html" class="product-card cabinet">
+  <img src="img/tuhesocongsuat.png" alt="Tủ điều khiển hệ số công suất">
+  <div class="product-info">
+    <h5>TỦ ĐIỀU KHIỂN HỆ SỐ CÔNG SUẤT / Power Factor Correction Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 9 -->
+<a href="chitietsp/tudien4.html" class="product-card cabinet">
+  <img src="img/tuphanphoi.png" alt="Tủ phân phối">
+  <div class="product-info">
+    <h5>TỦ PHÂN PHỐI / Distribution Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+      <!-- Sản phẩm 10 -->
+<a href="chitietsp/tudien5.html" class="product-card cabinet">
+  <img src="img/tuchieusang.png" alt="Tủ điều khiển chiếu sáng">
+  <div class="product-info">
+    <h5>TỦ ĐIỀU KHIỂN CHIẾU SÁNG / Lighting Control Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 11 -->
+<a href="chitietsp/tudien6.html" class="product-card cabinet">
+  <img src="img/tudienke.png" alt="Tủ điện kế">
+  <div class="product-info">
+    <h5>TỦ ĐIỆN KẾ / KWh Meter Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 12 -->
+<a href="chitietsp/tudien7.html" class="product-card cabinet">
+  <img src="img/tudientong.jpg" alt="Tủ điện tổng">
+  <div class="product-info">
+    <h5>TỦ ĐIỆN TỔNG / MSB Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 13 -->
+<a href="chitietsp/tudien8.html" class="product-card cabinet">
+  <img src="img/tuchuyenguon.png" alt="Tủ ATS">
+  <div class="product-info">
+    <h5>TỦ TỰ ĐỘNG CHUYỂN NGUỒN / Auto Transfer Source-ATS Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+
+     <!-- Sản phẩm 14 -->
+<a href="chitietsp/tudien9.html" class="product-card cabinet">
+  <img src="img/tutrungtam.jpg" alt="Tủ MCC">
+  <div class="product-info">
+    <h5>TỦ ĐIỀU KHIỂN ĐỘNG CƠ TRUNG TÂM / Motor Control Center-MCC Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 15 -->
+<a href="chitietsp/tudien10.html" class="product-card cabinet">
+  <img src="img/tukhongkhi.png" alt="Tủ HVAC">
+  <div class="product-info">
+    <h5>TỦ ĐIỀU HÒA KHÔNG KHÍ / HVAC Control Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 16 -->
+<a href="chitietsp/tudien11.html" class="product-card cabinet">
+  <img src="img/tubomnuoc.png" alt="Tủ bơm cấp nước và thoát nước">
+  <div class="product-info">
+    <h5>TỦ BƠM CẤP NƯỚC VÀ THOÁT NƯỚC / Water Supply and Wastewater Pump Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+<!-- Sản phẩm 17 -->
+<a href="chitietsp/tudien12.html" class="product-card cabinet">
+  <img src="img/tu.pccc.png" alt="Tủ bơm PCCC">
+  <div class="product-info">
+    <h5>TỦ BƠM PCCC / Fire Pump Cabinet</h5>
+    <p></p>
+  </div>
+</a>
+
+      
+
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>⚡ NGỌC PHÁT ENGINEERING</h3>
+        <p>Nhà thầu Cơ điện M&E và Kỹ thuật Điện Công nghiệp. Thiết kế, thi công, cung cấp và bảo trì cho các khách hàng công nghiệp trên toàn Việt Nam.</p>
+      </div>
+      <div>
+        <h4>Công ty</h4>
+        <ul>
+          <li>Giới thiệu</li>
+          <li>Dự án</li>
+          <li>Sản phẩm</li>
+          <li>Liên hệ</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li>Hệ thống điện hạ thế</li>
+          <li>Hệ thống điện trung thế</li>
+          <li>Máy biến áp & Tự động hóa PLC</li>
+          <li>Phòng cháy chữa cháy & Năng lượng mặt trời</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <p>📍 Thành phố Biên Hòa, Đồng Nai, Việt Nam</p>
+        <p>📞 0972 985 878</p>
+        <p>✉️ info@ngocphat.com</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
